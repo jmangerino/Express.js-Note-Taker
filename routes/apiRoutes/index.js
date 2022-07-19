@@ -1,7 +1,8 @@
 const fs = require('fs');
 const db = require('../../db/db.json');
-const uniqid = require('uniqid');
 const router = require('express').Router();
+const uniqid = require('uniqid');
+
 
 
 router.get('/api/notes', (req, res) => {
@@ -13,7 +14,7 @@ router.get('/api/notes', (req, res) => {
 })
 
 
-router.post('./api/notes', (req, res) => {
+router.post('/api/notes', (req, res) => {
     let newNote = {
         id: uniqid(),
         title: req.body.title,
